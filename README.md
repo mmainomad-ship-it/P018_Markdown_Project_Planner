@@ -1,17 +1,24 @@
 # 🤖 P018: Markdown Project Planning Agent
 
 ## 📖 Description
-This project demonstrates how to enforce strict output formatting from a Local Large Language Model (LLM) using Ollama. The script takes a high-level project goal from the user and instructs the LLM to act as an expert Project Manager, generating a structured, step-by-step project plan outputted *specifically in Markdown format*.
+This project demonstrates how to enforce **strict output formatting** from a Local Large Language Model (LLM) using Ollama. The script takes a high-level project goal from the user and instructs the LLM to act as an expert Project Manager, generating a structured, step-by-step project plan outputted *specifically in Markdown format*. **All generated plans are automatically saved to a log file.**
+
+---
 
 ## ✨ Key Features/Constraints
 * **Local LLM Integration:** Uses Ollama/local models (e.g., Llama 3) for privacy and resource control.
-* **Structured Output Control:** Enforces specific Markdown formatting (Headings, Bolding, Bullet Points) for the entire plan.
+* **Structured Output Control:** Enforces specific **Markdown formatting** (Headings, Bolding, Bullet Points) for the entire plan.
 * **Project Management Persona:** Assigns a strict role to the model to enhance response quality.
+* **Persistent Logging:** Automatically saves every user request and the resulting plan to `project_plans.txt` with an accurate timestamp.
+
+---
 
 ## 🛠️ Technology Stack
 * **Language:** Python
 * **Local LLM:** Ollama (requires an installed model like `llama3`)
-* **Libraries:** `ollama`
+* **Libraries:** `ollama`, `datetime` (Python built-in)
+
+---
 
 ## ⚙️ Setup Instructions
 
@@ -38,6 +45,9 @@ This project demonstrates how to enforce strict output formatting from a Local L
     ```bash
     python planner_agent.py
     ```
+    *A file named `project_plans.txt` will be created in the root directory after the first successful run.*
+
+---
 
 ## ✍️ Author
 **Author:** mmainomad-ship-it
